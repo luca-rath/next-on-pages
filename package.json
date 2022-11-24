@@ -1,6 +1,6 @@
 {
   "name": "@lcrh/next-on-pages",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "bin": {
     "next-on-pages": "./bin/index.js"
   },
@@ -8,9 +8,9 @@
     "build": "npx esbuild --bundle --platform=node ./src/index.ts --external:esbuild --external:chokidar --outfile=./dist/index.js"
   },
   "files": [
-    "./bin/index.js",
-    "./dist/index.js",
-    "./templates/"
+    "bin",
+    "dist",
+    "templates"
   ],
   "dependencies": {
     "acorn": "^8.8.0",
