@@ -135,7 +135,8 @@ export default {
       if ("middlewarePath" in route && route.middlewarePath in __MIDDLEWARE__) {
         return await __MIDDLEWARE__[route.middlewarePath].entrypoint.default(
           request,
-          context
+          context,
+          env
         );
       }
     }
@@ -156,7 +157,7 @@ export default {
       }
 
       if (found) {
-        return entrypoint.default(request, context);
+        return entrypoint.default(request, context, env);
       }
     }
 
